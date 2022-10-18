@@ -1,0 +1,15 @@
+package com.ilpexperion.basicprogramming;
+
+import java.util.Scanner;
+
+public class SimpleIfDemo {
+
+	public static void main(String[] args) {
+		int numb;
+		Scanner scanner = new Scanner(System.in);
+		System.out.println("Enter any number");
+		numb = scanner.nextInt();
+		
+	}
+
+}

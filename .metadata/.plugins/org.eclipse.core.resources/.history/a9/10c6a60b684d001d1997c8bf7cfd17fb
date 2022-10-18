@@ -1,0 +1,32 @@
+package com.experion.utility;
+
+import java.util.Scanner;
+
+public class DesendingOrder {
+
+	public static void main(String[] args) {
+		int bigNo;
+		int a;
+		int b;
+		int c;
+		Scanner scanner = new Scanner(System.in);
+		System.out.println("Enter the number");
+		a = scanner.nextInt();
+		b = scanner.nextInt();
+		c= scanner.nextInt();
+		if(a>b)
+		{
+			bigNo = a ;
+			
+		}
+		else if(b>c)
+		{
+			bigNo = b;
+		}
+		else
+		{
+			bigNo = c;
+		}
+		
+	}
+}

@@ -1,0 +1,9 @@
+package com.ilpexperion.objectclassbasics;
+
+public class Employee {
+	String employeeName = "Sreepriya";
+	int employeeAge = 23;
+	char employeeGender = 'F';
+	double employeeCgpa = 8.4;
+
+}

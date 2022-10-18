@@ -1,0 +1,56 @@
+package com.experion.service;
+
+import java.util.Scanner;
+
+import com.experion.entity.Product;
+
+public class Service {
+	 Product product = null;
+
+	public static Product createProduct() {
+
+		Scanner scanner = new Scanner(System.in);
+		System.out.println("Enter Product Code");
+		String productCode = scanner.nextLine();
+//		product.setProductCode(productCode);
+		System.out.println("Enter Product Name");
+		String productName = scanner.nextLine();
+//		product.setProductName(productName);
+		System.out.println("Enter Product Description");
+		String productDescription = scanner.nextLine();
+//		product.setProductDescription(productDescription);
+		System.out.println("Enter Product Price");
+		double productPrice = scanner.nextDouble();
+//		product.setProductPrice(productPrice);
+		System.out.println("Enter Product Open date");
+		scanner.nextLine();
+		String openDate = scanner.nextLine();
+//		product.setOpenDate(openDate);
+		System.out.println("Enter Product Validity Date");
+		String validityDate = scanner.nextLine();
+//		product.setValidityDate(validityDate);
+		System.out.println("Enter Product Expiry Date");
+		String expiryDate = scanner.nextLine();
+//		product.setExpiryDate(expiryDate);
+		System.out.println("Active True or False");
+		boolean active = scanner.hasNext();
+//		product.setActive(active);
+		Product product = new Product(productCode, productName, productDescription, productPrice, openDate, validityDate,
+				expiryDate, active);
+		return product;
+
+	}
+
+	
+		
+
+	public static void displayDetails(Product product) {
+		System.out.println("Product Code   Product Name   Product Price   Product Quality   validity Date  Expiry Date  Active");
+		System.out.println(product.getProductCode() + "   " + product.getProductName() + "  "
+				+ product.getProductDescription() + "  " + product.getProductPrice() + "    " + product.getOpenDate()
+				+ "   " + product.getValidityDate() + "   " + product.getExpiryDate() + "  " + product.isActive());
+	}
+		
+	}
+
+}

@@ -1,0 +1,26 @@
+package com.experion.utility;
+
+import java.util.Scanner;
+
+import com.experion.entity.Product;
+
+public class ProductUtility {
+
+	public static void main(String[] args) {
+		
+		Scanner scanner = new Scanner(System.in);
+		Product product = new Product();
+		System.out.println("Enter the product code");
+		String productCode = scanner.nextLine();
+		product.setProductCode(productCode);
+		System.out.println("The product code is -" +product.getProductCode());
+		System.out.println("Enter the product name");
+		String productName = scanner.nextLine();
+		product.setProductName(productName);
+		System.out.println("The product name is -" +product.getProductName());
+		
+		
+		
+	}
+
+}

@@ -1,0 +1,15 @@
+package com.experion.utility;
+
+import java.util.Scanner;
+
+public class StockUtility {
+
+	public static void main(String[] args) {
+		int choice;
+		Scanner scanner = new Scanner(System.in);
+		System.out.println("Enter choice");
+		choice = scanner.nextInt();
+		
+	}
+
+}

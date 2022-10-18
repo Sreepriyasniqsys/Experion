@@ -1,0 +1,16 @@
+package com.ilpexperion.basicprogramming;
+
+public class Assignment {
+	
+	String name = "Sreepriya";
+	int age = 23;
+	char gender = 'F';
+	double cgpa = 8.4;
+
+	public static void main(String[] args) {
+		System.out.println("*******Welcome to ILP Program*********");
+		System.out.println(name);
+
+	}
+
+}

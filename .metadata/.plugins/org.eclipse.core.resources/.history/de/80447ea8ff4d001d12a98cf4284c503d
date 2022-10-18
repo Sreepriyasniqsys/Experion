@@ -1,0 +1,54 @@
+package com.experion.service;
+
+import java.util.Scanner;
+
+import com.experion.entity.Stock;
+
+public class Service {
+	
+	Stock stock=null;
+	
+	public Stock stockUpdation()
+	{
+
+		Scanner scanner = new Scanner(System.in);
+		Stock stockList[] = new Stock[3];
+		for(int i =0;i>3;i++)
+		{
+		
+		System.out.println("Enter Stock Code");
+		String stockCode = scanner.nextLine();
+		System.out.println("Enter Stock Name");
+		String stockName = scanner.nextLine();
+		System.out.println("Enter Stock Description");
+		String stocktDescription = scanner.nextLine();
+		System.out.println("Enter Stock Price");
+		double stockPrice = scanner.nextDouble();
+		System.out.println("Enter Stock Open date");
+		scanner.nextLine();
+		String openDate = scanner.nextLine();
+		System.out.println("Enter Stock Validity Date");
+		String validityDate = scanner.nextLine();
+		System.out.println("Enter Stock Expiry Date");
+		String expiryDate = scanner.nextLine();
+		System.out.println("Active True or False");
+		boolean active = scanner.hasNext();
+		stockList[i]  = new Stock( stockCode,stockCode,stocktDescription,stockPrice,openDate,validityDate,expiryDate,active);
+		
+		}
+		return stock;
+		
+
+	}
+		
+	public void displayStock(Stock stock)
+	{
+		System.out.println("*********STOCKS AVAILABLE IN SUPERMARKET*******************");
+		System.out.println(
+				"Stock Code   Stock Name   Stock Price   Stock Quality   validity Date  Expiry Date  Active");
+		System.out.println(stock.getStockCode()+ "   " + stock.getStockName() + "  " + stock.getStockDescription()+ "  " + stock.getStockPrice() + "    "
+				+ stock.getOpenDate()+ "   " + stock.getValidityDate()+ "   " + stock.getExpiryDate() + "  " + stock.isActive());
+	}
+	}
+
+

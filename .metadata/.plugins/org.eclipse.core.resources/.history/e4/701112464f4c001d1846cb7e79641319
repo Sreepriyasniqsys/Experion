@@ -1,0 +1,23 @@
+package com.experion.basicprogrammng;
+
+import java.util.Scanner;
+
+public class ArrayLoop {
+
+	public static void main(String[] args) {
+		Scanner scanner = new Scanner(System.in);
+		String productName[] = new String[5];
+		System.out.println("Enter 5 product");
+		for(int index=0;index<5;index++) {
+		productName[index] = scanner.next();
+		}
+		System.out.println("*****PRODUCTS IN STOCK********");
+		for(int index=0;index<5;index++) {
+			productName[index] = scanner.next();
+			System.out.println(productName[index]);
+			}
+		
+			
+	}
+
+}

@@ -1,0 +1,136 @@
+
+package com.canddella.service;
+
+import java.util.Scanner;
+
+import com.canddella.entity.Product;
+
+public class ProductService {
+
+		private static Product productList[]=new Product[1];
+		private static Product product;
+		public static Product[] takeStock()
+		{
+			Scanner scanner = new Scanner(System.in);
+			
+				for(int index = 0;index<productList.length;index++)
+				{   scanner.next();
+					System.out.println("Enter the product code : - ");
+					String productCode = scanner.nextLine();
+					System.out.println("Enter the product name : - ");
+					String productName = scanner.nextLine();
+					System.out.println("Enter the product price : - ");
+					int productPrice = scanner.nextInt();
+					scanner.nextLine();
+					System.out.println("Enter the product manufacturing date : - ");
+					String openDate = scanner.nextLine();
+					System.out.println("Enter the product expiry date: - ");
+					String expiryDate = scanner.nextLine();
+					System.out.println("Enter the product offer valid till date: - ");
+					String offerValidTillDate = scanner.nextLine();
+					System.out.println("Enter the Total Stock: - ");
+					int actualStock= scanner.nextInt();
+			
+					productList[index] = new Product(productCode,productName,productPrice,openDate,expiryDate,  offerValidTillDate, actualStock);
+				}
+			
+			return productList;
+		}
+		public static void displayStock( Product productList[])
+			{
+				System.out.println("** The List of Products Availbale to Buy are ***");
+				System.out.println("Product Code  " + "      					" + "Product Name "+ "     					 " + "Price "+ "" +"          						 Manufacturing Date" + "                      " + "Expiry Date"+"       				 	"+"Offer Valid Date" );
+				for(Product temp : productList)
+				{
+				System.out.println(temp.getProductCode()+ "                		" +temp.getProductName()+ "        			 " +temp.getProductPrice()+ "               		" +temp.getOpenDate()+ "             		  " +temp.getExpiryDate()+"      	 			"+temp.getOfferValidTillDate());
+		    }
+		
+			}
+	 
+		
+		public static void updateStock(Product product, int quantity)
+		{
+			int balanceStock = product.getActualStock()- quantity;
+			product.setActualStock(balanceStock);
+		}
+		public static void printBill(boolean offerValid,Product product)
+			{
+			
+				System.out.println("** Super Market Invoice ***");
+			
+				{
+				if(offerValid)
+				{
+					int discount = (product.getProductPrice() * 10/100);
+					int discountedPrice = product.getProductPrice() - discount;	
+	                System.out.println("Product Code  " + "    					 	 " + "Product Name "+ "     				 " + "Price "+ "" +"          					 Manufacturing Date" + "                     	" + "Expiry Date" + "       				  " + "Offer Available or Not" + "     	    " +"Offer Price" );
+	                System.out.println(product.getProductCode()+ "           	 	" +product.getProductName()+ "       	 	 " +product.getProductPrice()+ "              	 " +product.getOpenDate()+ "                      " +product.getExpiryDate()+ "               " + " Offer Available" +  "    				 " + discountedPrice);
+				}
+				else
+				{
+		
+					System.out.println("Product Code  " + "      					"+ "Product Name "+ "      					" + "Price "+ "" +"          					 Manufacturing Date" + "                      	" + "Expiry Date" + "        					 " + "Offer Available or Not");
+					System.out.println(product.getProductCode()+ "       	 		 "+product.getProductName()+ "        	 	" +product.getProductPrice()+ "              	 " +product.getOpenDate()+ "                     " +product.getExpiryDate()+ "             		 " + "Not available");
+				
+				}
+	       }
+		}
+			
+		public static void salesReport(Product[] productList, int quantity)
+		{ 
+			System.out.println("******The Sales report******");
+			int i =1;
+			
+			System.out.println("SlNo"+"        				"+"Product Code"+"        			"+"Product Name "+ "                 "+" Actual Stock" +"         	"+" Balance Stock" + "        "+" Sales Amount" +"    "+"GST Collected");
+			for(Product temp : productList)
+			{
+		
+				int gst = quantity * ((Product.getProductPrice()* 18)/100);
+				int balanceStock =Product.getActualStock()- quantity;
+				int salesAmount=Product.getProductPrice()* quantity;
+				
+				System.out.println(i+"     				 "+Product.getProductCode()+"            "+Product.getProductName()+"         "+Product.getActualStock()+"        "+ balanceStock+"       "+ salesAmount +"            "+ gst);
+				
+		i++;
+			
+				updateStock(product, quantity);
+			}
+		}
+}
+
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+			
+			
+			
+	

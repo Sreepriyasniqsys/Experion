@@ -1,0 +1,68 @@
+package com.experion.utility;
+
+import java.util.Scanner;
+
+import com.experion.entity.Product;
+
+public class ProductUtility {
+
+	public static void main(String[] args) {
+		String productCode;
+		String productName;
+		String productDescription;
+		double  productPrice;
+		String openDate;
+		String validityDate;
+		String expiryDate;
+		boolean active;
+		Scanner scanner = new Scanner(System.in);
+		Product product = new Product();
+		System.out.println("Enter the product code");
+		 productCode = scanner.nextLine();
+		product.setProductCode(productCode);
+		System.out.println("The product code is -" +product.getProductCode());
+		
+//		Product productTwo = new Product();
+//		System.out.println("Enter the product code");
+//		 productCode = scanner.nextLine();
+//		product.setProductCode(productCode);
+//		System.out.println("The product code is -" +product.getProductCode());
+//		
+//		
+		System.out.println("Enter the product code");
+		 productCode = scanner.nextLine();
+		product.setProductCode(productCode);
+		System.out.println("The product code is -" +product.getProductCode());
+		System.out.println("Enter the product description");
+		 productDescription = scanner.nextLine();
+		product.setProductDescription(productDescription);
+		System.out.println("The product description is -" +product.getProductDescription());
+		System.out.println("Enter the product price");
+		 productPrice = scanner.nextDouble();
+		product.setProductPrice(productPrice);
+		System.out.println("The product price is -" +product.getProductPrice());
+		System.out.println("Enter the product open date");
+		scanner.nextLine();
+		 openDate= scanner.nextLine();
+		product.setOpenDate(openDate);
+		System.out.println("The product open date is -" +product.getOpenDate());
+		System.out.println("Enter the product validity date");
+		 validityDate= scanner.nextLine();
+		product.setValidityDate(validityDate);
+		System.out.println("The product validity date is -" +product.getValidityDate());
+		System.out.println("Enter the product expiry date");
+		 expiryDate= scanner.nextLine();
+		product.setExpiryDate(expiryDate);
+		System.out.println("The product expiry date is -" +product.getExpiryDate());
+		System.out.println("Enter the product Is Active or not");
+		 active= scanner.hasNext();
+		product.setActive(active);
+		System.out.println("The product is active or not -" +product.isActive());
+		
+		
+		
+		
+	
+
+}
+}

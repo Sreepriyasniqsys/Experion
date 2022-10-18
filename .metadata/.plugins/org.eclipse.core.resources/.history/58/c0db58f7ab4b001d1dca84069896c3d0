@@ -1,0 +1,28 @@
+package com.ilpexperion.basicprogramming;
+
+import java.util.Scanner;
+
+public class ExperionEmployeeDetails {
+
+	public static void main(String[] args) {
+		
+		Scanner scanner = new Scanner(System.in);
+		System.out.println("*******Welcome to ILP Program*********");
+		String employeeName ;
+		int employeeAge;
+		char employeeGender;
+		double employeeCgpa;
+		System.out.println("Enter your Employee Name");
+		scanner.next();
+		System.out.println("Enter your Employee Age");
+		scanner.nextInt();
+		System.out.println("Enter your Employee Gender");
+		scanner.next().charAt(0);
+		System.out.println("Enter your Employee CGPA");
+		scanner.nextDouble();
+		System.out.println("*********Employee Details****************");
+		System.out.println("Name" + "  " + "Age" + "  " + "Gender" + " " + "CGPA");
+		
+	}
+
+}

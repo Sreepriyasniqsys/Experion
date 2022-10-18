@@ -1,0 +1,10 @@
+package com.experion.basicprogrammng;
+
+public class VowelValuation {
+
+	public static void main(String[] args) {
+
+		
+	}
+
+}

@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Rename type &apos;com.experion.service.ProductService&apos; to &apos;Service&apos;&#x0D;&#x0A;- Original project: &apos;17102022_ILP_OOP_POJO&apos;&#x0D;&#x0A;- Original element: &apos;com.experion.service.ProductService&apos;&#x0D;&#x0A;- Renamed element: &apos;com.experion.service.Service&apos;&#x0D;&#x0A;- Update references to refactored element&#x0D;&#x0A;- Update textual occurrences in comments and strings" description="Rename type &apos;ProductService&apos;" flags="589830" id="org.eclipse.jdt.ui.rename.type" input="/src&lt;com.experion.service{ProductService.java[ProductService" matchStrategy="1" name="Service" qualified="false" references="true" similarDeclarations="false" stamp="1665984505775" textual="false" version="1.0"/>
+</session>

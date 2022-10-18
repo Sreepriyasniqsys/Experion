@@ -1,0 +1,23 @@
+package com.experion.basicprogrammng;
+
+import java.util.Scanner;
+
+public class ArrayDemo {
+
+	public static void main(String[] args) {
+		Scanner scanner = new Scanner(System.in);
+		String productName[] = new String[5];
+		System.out.println("Enter the first product");
+		productName[0] = scanner.next();
+		System.out.println("Enter the second product");
+		productName[1] = scanner.next();
+		System.out.println("Enter the third product");
+		productName[2] = scanner.next();
+		System.out.println("Enter the forth product");
+		productName[3] = scanner.next();
+		System.out.println("Enter the fifth product");
+		productName[4] = scanner.next();
+
+	}
+
+}
