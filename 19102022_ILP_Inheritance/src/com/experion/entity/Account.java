@@ -1,33 +1,34 @@
 package com.experion.entity;
 
-import java.util.ArrayList;
 
 public class Account extends Product {
 
-	private String accountType;
-	private ArrayList<BankService>bankService;
-
-	public Account(String productCode, String productName, String productType, String accountType,
-			ArrayList<BankService> bankService) {
-		super(productCode, productName, productType);
-		this.accountType = accountType;
-		this.bankService = bankService;
+	
+	private String accountNumber;
+	private double accountBalance;
+	public Account(String productName, String accountNumber, double accountBalance) {
+		super(productName);
+		this.accountNumber = accountNumber;
+		this.accountBalance = accountBalance;
 	}
-
-	public String getAccountType() {
-		return accountType;
+	public String getAccountNumber() {
+		return accountNumber;
 	}
-
-	public void setAccountType(String accountType) {
-		this.accountType = accountType;
+	public void setAccountNumber(String accountNumber) {
+		this.accountNumber = accountNumber;
 	}
-
-	public ArrayList<BankService> getBankService() {
-		return bankService;
+	public double getAccountBalance() {
+		return accountBalance;
 	}
-
-	public void setBankService(ArrayList<BankService> bankService) {
-		this.bankService = bankService;
+	public void setAccountBalance(double accountBalance) {
+		this.accountBalance = accountBalance;
 	}
+	@Override
+	public void checkProductValidity() {
+		System.out.println("Validity check of Account class called");
+	}
+	
+	
+} 
 
-}
+

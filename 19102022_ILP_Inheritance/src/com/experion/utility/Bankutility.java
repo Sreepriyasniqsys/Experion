@@ -1,39 +1,39 @@
 package com.experion.utility;
 
-import java.util.ArrayList;
 import java.util.Scanner;
 
+import com.experion.entity.Account;
+import com.experion.entity.Card;
+import com.experion.entity.Loan;
 import com.experion.entity.Product;
-import com.experion.service.Service;
 
 public class Bankutility {
 
 	public static void main(String[] args) {
-		char mainChoice;
-		int choice;
-		ArrayList<Product> producList = new ArrayList();
+		
+//		Account account = new Account ("Womens Savings Account","AC108",10000);
+//		AccountService accountService = new AccountService();
+//		accountService.depositCash(account, 2000);
+//		accountService.depositCash(account, "DE100", 3000);
+//		accountService.depositCash(account, "DE100",1000);
+		Product product=null;
 		Scanner scanner = new Scanner(System.in);
-		do {
-			System.out.println("1.Add Card Products, 2.Add Account Products, 3.Display Products");
-			choice = scanner.nextInt();
-			switch (choice) {
-			case 1:
-				producList.add(Service.createProduct("Cards"));
-				break;
+		System.out.println("1.Account , 2.Card , 3.Loan");
+		int choice = scanner.nextInt();
+		if(choice==1)
+		{
+			product = new Account("Womens Savings Account", "WSA100",1000);
+		}
+		else if(choice==2)
+		{
+			product = new Card("Pan Card", "PAN100",1000);
 
-			case 2:
-				producList.add(Service.createProduct("Account"));
-				break;
-			case 3:
-				Service.displayProductDetails(producList);
-				break;
-			default:
-				System.out.println("Invalid choice");
-			}
-			System.out.println("Do you want to continue(y/n) -");
-			mainChoice = scanner.next().charAt(0);
-		} while (choice != 'y');
+		}
+		else if(choice==3)
+		{
+			product = new Loan("Car Loan", "LN100",1000000);
 
+		}
+		product.checkProductValidity();
 	}
-
 }

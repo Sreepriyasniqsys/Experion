@@ -1,4 +1,8 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <qualifiedTypeNameHistroy>
     <fullyQualifiedTypeName name="com.experion.service.Service"/>
+    <fullyQualifiedTypeName name="com.experion.entity.Account"/>
+    <fullyQualifiedTypeName name="com.experion.entity.Card"/>
+    <fullyQualifiedTypeName name="com.experion.service.AccountServiceInterface"/>
+    <fullyQualifiedTypeName name="com.experion.service.ElectronicsInterface"/>
 </qualifiedTypeNameHistroy>
